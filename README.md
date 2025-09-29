@@ -1,5 +1,7 @@
 # The Accidental CTO - Interactive System Design Journey
 
+🌐 **Live Demo:** [https://niranjanxprt.github.io/dukaan-system-design/](https://niranjanxprt.github.io/dukaan-system-design/)
+
 An interactive web application that visualizes the complete architectural evolution of Dukaan from a single 512MB server to a globally distributed system handling millions of users, as documented in "The Accidental CTO" by Subhash Choudhary.
 
 ## 🚀 **NEW: Fixed Interactive Flowchart!**
@@ -84,17 +86,23 @@ An interactive web application that visualizes the complete architectural evolut
 
 ## Getting Started
 
+### 🌐 **Live Application**
+Visit the live application: **[https://niranjanxprt.github.io/dukaan-system-design/](https://niranjanxprt.github.io/dukaan-system-design/)**
+
 ### 🖥️ **Local Development**
-1. Extract the zip file
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/niranjanxprt/dukaan-system-design.git
+   cd dukaan-system-design
+   ```
 2. Open `index.html` in your web browser
 3. No build process required - pure HTML/CSS/JavaScript
 
-### 🌐 **GitHub Pages Deployment**
-1. Create new GitHub repository
-2. Upload all files to repository root
-3. Go to Settings → Pages
-4. Select "Deploy from a branch" → main
-5. Access at `https://yourusername.github.io/repository-name`
+### 🚀 **Deploy Your Own**
+1. Fork this repository
+2. Go to Settings → Pages
+3. Select "Deploy from a branch" → main
+4. Your site will be live at `https://yourusername.github.io/dukaan-system-design`
 
 ## File Structure
 

@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Accidental CTO - Interactive System Design Journey</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header__content">
+                <div class="header__logo">
+                    <svg class="logo-icon" width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect width="48" height="48" rx="12" fill="#4ECDC4"/>
+                        <path d="M12 16L24 12L36 16V28C36 32.4183 31.9706 36 24 36C16.0294 36 12 32.4183 12 28V16Z" stroke="white" stroke-width="2" fill="none"/>
+                        <path d="M16 20L24 24L32 20" stroke="white" stroke-width="2" stroke-linecap="round"/>
+                        <path d="M16 26L24 30L32 26" stroke="white" stroke-width="2" stroke-linecap="round"/>
+                    </svg>
+                    <h1 class="header__title">The Accidental CTO</h1>
+                </div>
+                <p class="header__subtitle">Interactive System Design Journey - Dukaan's Scaling Evolution</p>
+                <div class="header__stats">
+                    <div class="stat">
+                        <span class="stat__number">19</span>
+                        <span class="stat__label">Chapters</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat__number">1M+</span>
+                        <span class="stat__label">Stores</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat__number">512MB</span>
+                        <span class="stat__label">→ Global Scale</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Navigation -->
+    <nav class="navigation">
+        <div class="container">
+            <div class="nav__tabs">
+                <button class="nav__tab nav__tab--active" data-tab="flowchart">Interactive Flowchart</button>
+                <button class="nav__tab" data-tab="timeline">Journey Timeline</button>
+                <button class="nav__tab" data-tab="theories">System Design Theories</button>
+                <button class="nav__tab" data-tab="architecture">Architecture Evolution</button>
+            </div>
+            <div class="nav__controls">
+                <input type="text" class="search-input" placeholder="Search chapters or technologies...">
+                <select class="filter-select">
+                    <option value="all">All Categories</option>
+                    <option value="Crisis">Crisis Management</option>
+                    <option value="Foundation">Foundation</option>
+                    <option value="Architecture">Architecture</option>
+                    <option value="Scaling">Scaling</option>
+                    <option value="Database">Database</option>
+                    <option value="Process">Process</option>
+                    <option value="Performance">Performance</option>
+                    <option value="Services">Services</option>
+                    <option value="Infrastructure">Infrastructure</option>
+                    <option value="Global">Global</option>
+                    <option value="Orchestration">Orchestration</option>
+                    <option value="Resilience">Resilience</option>
+                    <option value="Leadership">Leadership</option>
+                    <option value="Economics">Economics</option>
+                    <option value="Validation">Validation</option>
+                    <option value="Philosophy">Philosophy</option>
+                </select>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main">
+        <div class="container">
+            <!-- Flowchart View -->
+            <div id="flowchart" class="content-section content-section--active">
+                <div class="flowchart-container">
+                    <h2 class="section-title">System Architecture Evolution Flowchart</h2>
+                    <p class="section-subtitle">Interactive journey from single server to global distributed system</p>
+
+                    <div class="flowchart-canvas" id="flowchartCanvas">
+                        <!-- SVG Canvas will be rendered here -->
+                    </div>
+
+                    <div class="flowchart-controls">
+                        <button class="control-btn" id="zoomIn">🔍 Zoom In</button>
+                        <button class="control-btn" id="zoomOut">🔍 Zoom Out</button>
+                        <button class="control-btn" id="resetView">🔄 Reset View</button>
+                        <button class="control-btn" id="showAll">📊 Show All Chapters</button>
+                    </div>
+
+                    <div class="chapter-counter">
+                        <span id="chapterCount">Loading chapters...</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Timeline View -->
+            <div id="timeline" class="content-section">
+                <div class="timeline-container">
+                    <h2 class="section-title">Scaling Journey Timeline</h2>
+                    <p class="section-subtitle">Chronological evolution through 19 chapters</p>
+
+                    <div class="timeline" id="timelineContainer">
+                        <!-- Timeline items will be rendered here -->
+                    </div>
+                </div>
+            </div>
+
+            <!-- System Design Theories -->
+            <div id="theories" class="content-section">
+                <div class="theories-container">
+                    <h2 class="section-title">System Design Theories & Principles</h2>
+                    <p class="section-subtitle">Key concepts and patterns applied throughout the journey</p>
+
+                    <div class="theory-grid" id="theoryGrid">
+                        <!-- Theory cards will be rendered here -->
+                    </div>
+                </div>
+            </div>
+
+            <!-- Architecture Evolution -->
+            <div id="architecture" class="content-section">
+                <div class="architecture-container">
+                    <h2 class="section-title">Architecture Evolution</h2>
+                    <p class="section-subtitle">Visual progression of system architecture changes</p>
+
+                    <div class="architecture-timeline" id="architectureTimeline">
+                        <!-- Architecture progression will be rendered here -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Chapter Detail Modal -->
+    <div id="chapterModal" class="modal">
+        <div class="modal-content">
+            <button class="modal-close" id="modalClose">&times;</button>
+            <div class="modal-body" id="modalBody">
+                <!-- Chapter details will be rendered here -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 The Accidental CTO Interactive Guide. Based on the book by Subhash Choudhary.</p>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>
